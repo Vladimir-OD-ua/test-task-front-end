@@ -1,0 +1,326 @@
+@font-face {
+    font-family: NeueMachina;
+    src: url(../Fonts/NeueMachina-Black.ttf), url("../Fonts/NeueMachina-Light.ttf");
+}
+
+@font-face {
+    font-family: NeueMachinaLight;
+    src: url("../Fonts/NeueMachina-Light.ttf");
+}
+
+@font-face {
+    font-family: DrukTextWide;
+    src: url(../Fonts/DrukTextWideCyrBoldItalic.otf);
+}
+
+:root {
+    --primary-color: #ffffff;
+    --yellow-color: #f8ff13;
+}
+
+
+body {
+    margin: 0;
+    background: url("../img/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: DrukTextWide;
+}
+
+.bg{
+    z-index: 5;
+    position:absolute;
+    background: linear-gradient(0deg, rgba(0,0,0,0.923406862745098) 0%,
+    rgba(59,34,195,0.32396708683473385) 46%, rgba(2,0,36,0.9318102240896359) 98%);
+    width: 100%;
+    height:100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.paralax-section {
+    right: 0;
+    max-width: 1270px;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+#parallax {
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/man.png");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-size: 50px;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--primary-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.title-transparent {
+    right: 100px;
+    z-index: 15;
+    position: absolute;
+    bottom: 30%;
+    color: transparent;
+}
+
+.title-white {
+    color: var(--primary-color);
+    right: 100px;
+    z-index: 9;
+    position: absolute;
+    bottom: 30%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 20;
+    padding: 10px 0;
+}
+
+.header-title {
+    font-size: 50px;
+    color: var(--yellow-color);
+    text-transform: uppercase;
+}
+
+.header-logo-title {
+    font-size: 20px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-family: NeueMachina;
+}
+
+.caption {
+    font-size: 10px;
+    font-family: NeueMachinaLight;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.stage {
+    position: fixed;
+    right: 18%;
+    top: 21%;
+}
+
+.box {
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: linear;
+}
+@keyframes bounce-1 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+
+.stage-2 {
+    position: fixed;
+    right: 10%;
+    bottom: 5%;
+}
+
+.box-stage-2 {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.bounce-2 {
+    animation-name: bounce-2;
+    animation-timing-function: linear;
+}
+@keyframes bounce-2 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+.stage-3 {
+    position: fixed;
+    left: 32%;
+    bottom: 10%;
+}
+
+.box-stage-3 {
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.bounce-3 {
+    animation-name: bounce-3;
+    animation-timing-function: linear;
+}
+@keyframes bounce-3 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+
+.web-site-info-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: center;
+}
+
+.subtitle-body {
+    font-size: 50px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.title-info-body-transparent {
+    font-size: 100px;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--primary-color);
+    text-transform: uppercase;
+    position: absolute;
+    left: 20px;
+}
+
+.title-info-body {
+    margin-left: 110px;
+    position: relative;
+    font-size: 100px;
+    color: var(--yellow-color);
+    text-transform: uppercase;
+}
+
+.body-btn-section {
+    position: relative;
+}
+
+.info-body-btn {
+    margin-top: 30px;
+    border: none;
+    width: 400px;
+    height: 70px;
+    -webkit-transform: skew(-10deg);
+    -moz-transform: skew(-10deg);
+    -o-transform: skew(-10deg);
+    background: var(--yellow-color);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.body-btn {
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.body-btn-border {
+    top: 40px;
+    left: 7px;
+    position: absolute;
+    color: transparent;
+    width: 400px;
+    height: 70px;
+    -webkit-transform: skew(-10deg);
+    -moz-transform: skew(-10deg);
+    -o-transform: skew(-10deg);
+    border: 1px solid var(--primary-color);
+}
+
+.info-body-btn:hover {
+    background: var(--primary-color);
+    box-shadow: 7px 8px 3px 8px rgb(30 17 85);
+}
+
+.info-body-transcription {
+    z-index: 200;
+    font-family: NeueMachinaLight;
+    margin-left: 140px;
+    margin-top: 35px;
+    border: none;
+    background: none;
+    color: var(--primary-color);
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.info-body-transcription:hover {
+    color: var(--yellow-color);
+    text-decoration: none;
+}
+
+.footer-section {
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.sponsors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.social-linc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 5%;
+}
+
+.social-linc a {
+    cursor: pointer;
+    padding: 4px 5px;
+    border-radius: 15%;
+}
+
+.social-linc a:hover {
+    background-color: orange;
+}
+
+.mobile-header {
+    display: none;
+}
+
+
+
+
+
