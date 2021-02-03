@@ -9,9 +9,9 @@
 
 @media (max-width:992px) {
     #parallax {
-        height: 95%;
+        height: 90%;
         background-size: 400px 600px;
-        background-position: 60% 30%;
+        background-position: 60% 0;
     }
     .paralax-section {
         width: 100%;
